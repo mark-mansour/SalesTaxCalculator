@@ -20,12 +20,12 @@ Requirements for the software and other tools to build, test and push
 
 To get a development environment running
 
-1- Pull Code from GitHub. 
-2- Run the DB script to create the database structure: ~\SalesTaxCalculator\Database\DDL.sql.
-3- Run the DB script to insert data in CountyTax table: ~\SalesTaxCalculator\Database\DML.sql.
-4- Compile the whole solution.
-5- Run unit tests.
-6- Run the project "SalesTaxCalculator.API" on "IIS Express" to run the REST API.
+- 1- Pull Code from GitHub. 
+- 2- Run the DB script to create the database structure: ~\SalesTaxCalculator\Database\DDL.sql.
+- 3- Run the DB script to insert data in CountyTax table: ~\SalesTaxCalculator\Database\DML.sql.
+- 4- Compile the whole solution.
+- 5- Run unit tests.
+- 6- Run the project "SalesTaxCalculator.API" on "IIS Express" to run the REST API.
 
 
 

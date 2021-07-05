@@ -32,7 +32,7 @@ namespace SalesTaxCalculator.Service
 
             if (countyTax != null && countyTax.TaxRate >= 0m)
             {
-                decimal taxValue = price * countyTax.TaxRate / 100;
+                decimal taxValue = price * countyTax.TaxRate / 100m;
                 return (countyTax.TaxRate, taxValue);
             }
             else

@@ -27,6 +27,23 @@ namespace SalesTaxCalculator.API.Controllers
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public string Get()
+        {
+            var salesPrice = new SalesPrice
+            {
+                CountyName = "Please enter county name and other parameters in the URL. For example: https://localhost:44348/api/calculator/Vance%20County/100",
+                Price = String.Format("{0:C}", 0m),
+                TaxRate = $"{0m}%",
+                TotalPrice = String.Format("{0:C}", 0m)
+            };
+
+            string jsonSalesPrice = JsonSerializer.Serialize(salesPrice);
+
+            return jsonSalesPrice;
+        }
+
 
         // GET api/<CalculatorController>/county/price
         [HttpGet("{countyName}/{price}")]
@@ -44,9 +61,9 @@ namespace SalesTaxCalculator.API.Controllers
                     TotalPrice = String.Format("{0:C}", price + result.Item2)
                 };
 
-                string jsonSsalesPrice = JsonSerializer.Serialize(salesPrice);
+                string jsonSalesPrice = JsonSerializer.Serialize(salesPrice);
 
-                return Ok(jsonSsalesPrice);
+                return Ok(jsonSalesPrice);
             }
             catch(Exception ex)
             {

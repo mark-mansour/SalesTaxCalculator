@@ -43,9 +43,7 @@ The file "~\SalesTaxCalculator\AvalaraAssessment.postman_collection.json" contai
 
 ## Authors
 
-  - **Mark Mansour** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
-
+  - **Mark Mansour**
 
 
 ## Acknowledgments
@@ -54,6 +52,6 @@ I used help from the following sources on the internet:
 - "Let's build a REST API using C#, ASP NET Core, Dapper, SQL Server, Repository Pattern", by Faith Olusegun,
 https://www.bing.com/videos/search?q=build+rest+api+c%23&docid=608052023589043717&mid=A1573164BDE91ABB7B2FA1573164BDE91ABB7B2F&view=detail&FORM=VIRE
 - "Dapper: Getting Started", by Steve Michelotti, https://app.pluralsight.com/library/courses/getting-started-dapper/table-of-contents
-- "README Template", by Billie Thompson, https://www.readme-templates.com/
+- "README Template", by Billie Thompson, https://github.com/PurpleBooth
 
 

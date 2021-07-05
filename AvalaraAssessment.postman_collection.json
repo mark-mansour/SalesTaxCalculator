@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "4483cccf-6355-4e0e-a532-184bf44f3bd8",
+		"name": "AvalaraAssessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CalculatorExampleGet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44348/api/calculator",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"calculator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate_Durham_100",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44348/api/calculator/Durham%20County/100",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"calculator",
+						"Durham%20County",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate_NonExistingCounty_100",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44348/api/calculator/NonExistingCounty/100",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"calculator",
+						"NonExistingCounty",
+						"100"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

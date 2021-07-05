@@ -20,14 +20,20 @@ namespace SalesTaxCalculator.Service
             countyTaxRepository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        public async Task<decimal> CalculateSalesTax(string countyName, decimal price)
+        /// <summary>
+        /// This method calculates the sales tax and returns 2 decimal values (The first value is for the tax rate and the second one is for the sales tax value)
+        /// </summary>
+        /// <param name="countyName"></param>
+        /// <param name="price"></param>
+        /// <returns>(taxRate, salesTaxValue)</returns>
+        public async Task<(decimal, decimal)> CalculateSalesTax(string countyName, decimal price)
         {
             var countyTax = await countyTaxRepository.FindByCountyNameAsync(countyName);
 
             if (countyTax != null && countyTax.TaxRate >= 0m)
             {
-                decimal tax = price * countyTax.TaxRate / 100;
-                return tax;
+                decimal taxValue = price * countyTax.TaxRate / 100;
+                return (countyTax.TaxRate, taxValue);
             }
             else
             {

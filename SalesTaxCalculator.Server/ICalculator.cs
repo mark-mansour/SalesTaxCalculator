@@ -7,6 +7,6 @@ namespace SalesTaxCalculator.Service
 {
     public interface ICalculator
     {
-        Task<decimal> CalculateSalesTax(string countyName, decimal price);
+        Task<(decimal, decimal)> CalculateSalesTax(string countyName, decimal price);
     }
 }

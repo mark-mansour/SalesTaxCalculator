@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SalesTaxCalculator.Service;
+using SalesTaxCalculator.Shared.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -33,8 +35,18 @@ namespace SalesTaxCalculator.API.Controllers
         {
             try
             {
-                var salesTax = await calculator.CalculateSalesTax(countyName, price);
-                return Ok(salesTax);
+                var result = await calculator.CalculateSalesTax(countyName, price);
+                var salesPrice = new SalesPrice
+                {
+                    CountyName = countyName,
+                    Price = String.Format("{0:C}", price),
+                    TaxRate = $"{result.Item1}%",
+                    TotalPrice = String.Format("{0:C}", price + result.Item2)
+                };
+
+                string jsonSsalesPrice = JsonSerializer.Serialize(salesPrice);
+
+                return Ok(jsonSsalesPrice);
             }
             catch(Exception ex)
             {

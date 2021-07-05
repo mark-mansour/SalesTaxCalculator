@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SalesTaxCalculator.Data
 {
@@ -21,9 +21,9 @@ namespace SalesTaxCalculator.Data
             this.dbConnection = new SqlConnection(connectionString);
         }
 
-        public CountyTax FindByCountyName(string countyName)
+        public async Task<CountyTax> FindByCountyNameAsync(string countyName)
         {
-            return this.dbConnection.Query<CountyTax>("SELECT * FROM COUNTYTAX WHERE COUNTYNAME = @COUNTYNAME", new { countyName }).SingleOrDefault();
+            return await this.dbConnection.QueryFirstOrDefaultAsync<CountyTax>("SELECT * FROM COUNTYTAX WHERE COUNTYNAME = @COUNTYNAME", new { countyName });
         }
     }
 }

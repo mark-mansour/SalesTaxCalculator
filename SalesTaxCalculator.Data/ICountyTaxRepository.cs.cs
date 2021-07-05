@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SalesTaxCalculator.Data
 {
     public interface ICountyTaxRepository
     {
-        CountyTax FindByCountyName(string countyName);
+        Task<CountyTax> FindByCountyNameAsync(string countyName);
     }
 }

@@ -6,6 +6,7 @@ using System.Data;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace SalesTaxCalculator.Data.Test
 {
@@ -28,9 +29,9 @@ namespace SalesTaxCalculator.Data.Test
 
 
         [TestMethod]
-        public void Fetch_Existing_CountyTax_ByCountyName()
+        public async Task Fetch_Existing_CountyTax_ByCountyName()
         {
-            var durhamCountyTax = countyTaxRepository.FindByCountyName("Durham County");
+            var durhamCountyTax = await countyTaxRepository.FindByCountyNameAsync("Durham County");
 
             Assert.IsNotNull(durhamCountyTax);
             Assert.AreEqual("Durham County", durhamCountyTax.CountyName);
@@ -40,9 +41,9 @@ namespace SalesTaxCalculator.Data.Test
 
 
         [TestMethod]
-        public void Fetch_NonExisting_CountyTax_ByCountyName()
+        public async Task Fetch_NonExisting_CountyTax_ByCountyName()
         {
-            var nonExistingCountyTax = countyTaxRepository.FindByCountyName("Non Existing County");
+            var nonExistingCountyTax = await countyTaxRepository.FindByCountyNameAsync("Non Existing County");
 
             Assert.IsNull(nonExistingCountyTax);
         }

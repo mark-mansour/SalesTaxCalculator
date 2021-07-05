@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesTaxCalculator.Server", "SalesTaxCalculator.Server\SalesTaxCalculator.Server.csproj", "{CF8C28E6-38DA-4C7F-9B4F-9CF0364CCCD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalesTaxCalculator.Server", "SalesTaxCalculator.Server\SalesTaxCalculator.Server.csproj", "{CF8C28E6-38DA-4C7F-9B4F-9CF0364CCCD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesTaxCalculator.Shared", "SalesTaxLibrary.Shared\SalesTaxCalculator.Shared.csproj", "{AE204849-903C-4E38-A852-A4418A2BA356}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalesTaxCalculator.Shared", "SalesTaxLibrary.Shared\SalesTaxCalculator.Shared.csproj", "{AE204849-903C-4E38-A852-A4418A2BA356}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesTaxCalculator.Data", "SalesTaxCalculator.Data\SalesTaxCalculator.Data.csproj", "{697D7919-AC2C-4E68-AF1F-373671C6BA7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalesTaxCalculator.Data", "SalesTaxCalculator.Data\SalesTaxCalculator.Data.csproj", "{697D7919-AC2C-4E68-AF1F-373671C6BA7C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalesTaxCalculator.Client", "SalesTaxCalculator.Client\SalesTaxCalculator.Client.csproj", "{1D262E55-4CFB-445A-AAE1-7936DDB29C03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesTaxCalculator.Data.Test", "SalesTaxCalculator.Data.Test\SalesTaxCalculator.Data.Test.csproj", "{4D65AAD8-3943-4A32-A4B0-6DCE3891CC4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1D262E55-4CFB-445A-AAE1-7936DDB29C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D262E55-4CFB-445A-AAE1-7936DDB29C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D262E55-4CFB-445A-AAE1-7936DDB29C03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D65AAD8-3943-4A32-A4B0-6DCE3891CC4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D65AAD8-3943-4A32-A4B0-6DCE3891CC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D65AAD8-3943-4A32-A4B0-6DCE3891CC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D65AAD8-3943-4A32-A4B0-6DCE3891CC4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

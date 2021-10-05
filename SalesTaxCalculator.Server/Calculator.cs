@@ -28,7 +28,7 @@ namespace SalesTaxCalculator.Service
         /// <returns>(taxRate, salesTaxValue)</returns>
         public async Task<(decimal, decimal)> CalculateSalesTax(string countyName, decimal price)
         {
-            var countyTax = await countyTaxRepository.FindByCountyNameAsync(countyName);
+            var countyTax = await countyTaxRepository.FindByCountyNameAsync(countyName).ConfigureAwait(false);
 
             if (countyTax != null && countyTax.TaxRate >= 0m)
             {

@@ -9,6 +9,7 @@ using Moq;
 using System.Threading.Tasks;
 using System.Text.Json;
 using SalesTaxCalculator.Shared.Model;
+using System.Collections;
 
 namespace SalesTaxCalculator.API.Controllers.Test
 {

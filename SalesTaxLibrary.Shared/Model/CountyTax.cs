@@ -7,5 +7,7 @@ namespace SalesTaxCalculator.Shared.Model
         public Guid CountyTaxKey { get; set; }
         public string CountyName { get; set; }
         public decimal TaxRate { get; set; }
+
+        
     }
 }

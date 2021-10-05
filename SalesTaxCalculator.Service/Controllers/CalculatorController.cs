@@ -52,7 +52,7 @@ namespace SalesTaxCalculator.API.Controllers
         {
             try
             {
-                var result = await calculator.CalculateSalesTax(countyName, price);
+                var result = await calculator.CalculateSalesTax(countyName, price).ConfigureAwait(false);
                 var salesPrice = new SalesPrice
                 {
                     CountyName = countyName,

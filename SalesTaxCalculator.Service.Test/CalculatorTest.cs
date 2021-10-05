@@ -50,7 +50,7 @@ namespace SalesTaxCalculator.Service.Test
             decimal decimalPrice = Decimal.Parse(stringPrice);
             Calculator calc = new Calculator(countyTaxRepoMock);
 
-            var result = await calc.CalculateSalesTax(countyName, decimalPrice);
+            var result = await calc.CalculateSalesTax(countyName, decimalPrice).ConfigureAwait(false);
             Assert.AreEqual(6.75m, result.Item1);   // first value is the tax rate
             Assert.AreEqual(decimalPrice * 0.0675m, result.Item2);  // second value is the sales tax based on the price and the tax rate
         }
